@@ -62,6 +62,7 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     hints: false,
-    maxAssetSize: 200000
+    maxAssetSize: 300000,
+    maxEntrypointSize: 400000
   }
 }
