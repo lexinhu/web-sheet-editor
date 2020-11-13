@@ -5,7 +5,7 @@
         <v-card-title class="headline">
           {{ data.name }}
         </v-card-title>
-        <v-simple-table dense>
+        <v-simple-table>
           <template #default>
             <thead>
               <tr>
