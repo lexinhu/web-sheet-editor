@@ -61,9 +61,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    maxChunkSize: 300000
-  },
-  generate: {
-    dir: 'public'
+    hints: false,
+    maxAssetSize: 200000
   }
 }
