@@ -37,6 +37,9 @@ export const state = () => ({
 })
 
 export const mutations = {
+  clear (state) {
+    state.sheets.splice(0, state.sheets.length)
+  },
   add (state, sheet) {
     state.sheets.push(sheet)
     this.commit('updateSummary')
@@ -116,6 +119,9 @@ export const mutations = {
 }
 
 export const actions = {
+  clear ({ commit }) {
+    commit('clear')
+  },
   add ({ commit }, sheets) {
     for (const name in sheets) {
       const rows = sheets[name]

@@ -113,6 +113,7 @@ export default {
     },
     getFileData (ev) {
       const file = ev.target.files[0]
+      this.clear()
       this.$utils.readExcel(file).then((sheets) => {
         this.add(sheets)
       })
@@ -122,7 +123,8 @@ export default {
       this.$xlsx.writeFile(workbook, 'output.xlsx')
     },
     ...mapActions([
-      'add'
+      'add',
+      'clear'
     ])
   }
 }
